@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SPA</title>
+    <link rel="stylesheet" href="style1.css">
+    <style>
+        #menunav {
+    position: fixed;
+    object-fit: cover;
+    top: 370px;
+    left: 0%;
+    transform: translateX(-50%);
+    transform: translateY(-50%);
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    z-index: 10000;
+    list-style-type: none;
+}
+
+#menunav li {
+    display: block;
+    padding: 10px 20px;
+}
+
+#menunav li a {
+    color: white;
+    text-decoration: none;
+}
+
+#menunav li a:hover {
+    background-color: #555;
+    color: white;
+}
+
+#toggleMenu {
+    position: fixed;
+    top: 100px;
+    right: 10px;
+    cursor: pointer;
+}
+    </style>
+    <script>
+        document.getElementById('toggleMenu').addEventListener('click', function() {
+            var menu = document.getElementById('menunav');
+            if (menu.style.display === 'none') {
+                menu.style.display = 'block';
+            } else {
+                menu.style.display = 'none';
+            }
+        });
+    </script>
+</head>
+<body>
+   
+    <!--ho-->
+    <section class="banner" id="banner">
+        <div class="banner">
+            <header>
+                <a href="#banner" class="logo">Тест</a>
+                <ul id="menu">
+                    <li><a href="#banner">Главная</a></li>
+                    <li><a href="#services">Наша продукция</a></li>
+                    <li><a href="#technology">Блог</a></li>
+                    <li><a href="#contact">Свяжитесь с нами</a></li>
+                </ul>
+            </header>
+            <img src="images/bg.jpg" alt="">
+            <div class="content">
+                <h2>
+                    Главная
+                </h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis porta ultricies dignissim. Phasellus ultrices ac purus ac facilisis.
+                </p> 
+            </div>
+        </div>
+    </section>
+    <!--s1-->
+    
+    <!--s2-->
+    <section class="services" id="services">
+        <h2 class="heading">
+            Наша продукция
+        </h2>
+        <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus in ipsum eu tortor sollicitudin fermentum ut eu erat. Aenean et arcu nibh. Vivamus egestas mi vel fringilla aliquam. Mauris nec magna nec justo fringilla pharetra. Maecenas a ipsum ut est tempus fermentum. Ut placerat felis et tincidunt posuere. Nulla commodo magna eget diam vulputate, vitae rhoncus tortor iaculis. Aenean eleifend odio elit, dapibus commodo urna egestas sed. Phasellus sit amet ipsum rhoncus, vehicula leo sed, mattis ante. Nunc tempor vitae nisi ac luctus. Proin at enim mauris.
+        </p>
+        <div class="container">
+            <div class="serviceBx">
+                <img src="images/bc1.png" class="z1">
+            </div>
+            <div class="serviceBx">
+                <img src="images/bc2.png" class="z1">
+            </div>
+            <div class="serviceBx">
+                <img src="images/bc3.png" class="z1">
+            </div>
+        </div>
+    </section>
+    <!--s3-->
+    <section class="technology" id="technology">
+        <div class="imgBx"></div>
+        <div class="contentBx">
+            <h2 class="heading">Блог</h2>
+            <p class="text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus in ipsum eu tortor sollicitudin fermentum ut eu erat. Aenean et arcu nibh. Vivamus egestas mi vel fringilla aliquam. Mauris nec magna nec justo fringilla pharetra. Maecenas a ipsum ut est tempus fermentum. Ut placerat felis et tincidunt posuere. Nulla commodo magna eget diam vulputate, vitae rhoncus tortor iaculis. Aenean eleifend odio elit, dapibus commodo urna egestas sed. Phasellus sit amet ipsum rhoncus, vehicula leo sed, mattis ante. Nunc tempor vitae nisi ac luctus. Proin at enim mauris. <br><br>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus in ipsum eu tortor sollicitudin fermentum ut eu erat. Aenean et arcu nibh. Vivamus egestas mi vel fringilla aliquam. Mauris nec magna nec justo fringilla pharetra. Maecenas a ipsum ut est tempus fermentum. Ut placerat felis et tincidunt posuere. Nulla commodo magna eget diam vulputate, vitae rhoncus tortor iaculis. Aenean eleifend odio elit, dapibus commodo urna egestas sed. Phasellus sit amet ipsum rhoncus, vehicula leo sed, mattis ante. Nunc tempor vitae nisi ac luctus. Proin at enim mauris.
+            </p>
+        </div>
+    </section>
+    <!--s4-->
+    <section class="contact" id="contact">
+        <h2 class="heading">Свяжитесь с нами</h2>
+        <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus in ipsum eu tortor sollicitudin fermentum ut eu erat. Aenean et arcu nibh. Vivamus egestas mi vel fringilla aliquam. Mauris nec magna nec justo fringilla pharetra. Maecenas a ipsum ut est tempus fermentum. Ut placerat felis et tincidunt posuere. Nulla commodo magna eget diam vulputate, vitae rhoncus tortor iaculis. Aenean eleifend odio elit, dapibus commodo urna egestas sed. Phasellus sit amet ipsum rhoncus, vehicula leo sed, mattis ante. Nunc tempor vitae nisi ac luctus. Proin at enim mauris.
+        </p>
+    </section>
+    <section class="about">
+        <div class="contentBx">
+            <form class="form" method="post" id="data-form">
+                <div class="inputBx">
+                    <input type="text" id="name" name="name" placeholder="Имя">
+                </div>
+                <div class="inputBx">
+                    <input type="text" id="sname" name="sname" placeholder="Фамилия">
+                </div>
+                <div class="inputBx">
+                    <input type="text" id="phone" name="phone" placeholder="Номер телефона">
+                </div>
+                <div class="inputBx">
+                    <input class="textarea" type="text" id="message" name="message" placeholder="Напишите ваше сообщение">
+                </div>
+                <div class="inputBx">
+                    <input id="submit" type="button" value="Отправить" onclick="submitForm()">
+                </div>
+            </form>
+        </div>
+        <div class="imgBx2"></div>
+    </section>
+    
+    <div id="response"></div>
+    
+    
+    <!--disqus-->
+    <div id="disqus_thread"></div>
+        <script>
+            /**
+            *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+            *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+            /*
+            var disqus_config = function () {
+            this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+            this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+            };
+            */
+            (function() { // DON'T EDIT BELOW THIS LINE
+            var d = document, s = d.createElement('script');
+            s.src = 'https://testone-5.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <!--s5-->
+    <section class="footer">
+        <footer>
+            <ul id="menu">
+                <li><a href="#banner">Главная</a></li>
+                <li><a href="#services">Наши работы</a></li>
+                <li><a href="#technology">Ценности</a></li>
+                <li><a href="#contact">Свяжитесь с нами</a></li>
+            </ul>
+        </footer>
+    </section>
+    <!--s6-->
+    <div class="container">
+        <div class="chatbox">
+            <div class="chatbox__support">
+                <div class="chatbox__header">
+                    <div class="chatbox__image--header">
+                        <img src="image.png" alt="image">
+                    </div>
+                    <div class="chatbox__content--header">
+                        <div id="closeChat" class="chatbox__close">
+                            <img src="krestik.png" alt="Close Chat">
+                        </div>
+                        
+                        <h4 class="chatbox__heading--header">Чат Поддержки</h4>
+                        <p class="chatbox__description--header">Подруга дней моих суровых,
+                            Голубка дряхлая моя!…</p>
+                    </div>
+                </div>
+                <div class="chatbox__messages">
+                    <div class="messages__container">
+                        <div class="messagesitem messagesitem--visitor">
+                            Здраствуйте, чем могу помочь?
+                        </div>
+                        <div class="messagesitem messagesitem--operator">
+                            Мне нужно сделать чат на сайте
+                        </div>
+                        <div class="messagesitem messagesitem--visitor">
+                            уже готово!
+                        </div>
+                        <div class="messagesitem messagesitem--operator">
+                            ура!
+                        </div>
+                        <div class="messagesitem messagesitem--typing">
+                            <span class="messages__dot"></span>
+                            <span class="messages__dot"></span>
+                            <span class="messages__dot"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="chatbox__footer">
+                    <img src="emojiimg.png" alt="">
+                    <img src="microphoneimg.png" alt="">
+                    
+                    <div class="chatbox__input">
+                        <input type="text" id="messageInput" placeholder="Write a message...">
+                        <button id="sendMessageButton">Отправить</button>
+                    </div>
+                                  
+                    <img src="attachmentimg.png" alt="">
+                </div>
+            </div>
+            <div class="chatbox__button">
+                <button>button</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        function submitForm() {
+            var name = document.getElementById("name").value;
+            var sname = document.getElementById("sname").value;
+            var phone = document.getElementById("phone").value;
+            var message = document.getElementById("message").value;
+
+            var xhr = new XMLHttpRequest();
+            var formData = new FormData();
+            formData.append('name', name);
+            formData.append('sname', sname);
+            formData.append('phone', phone);
+            formData.append('message', message);
+
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    document.getElementById("response").innerHTML = xhr.responseText;
+                }
+            };
+
+            xhr.open("POST", "create.php", true);
+            xhr.send(formData);
+        }
+
+    </script>
+    <script>
+        
+        
+        class InteractiveChatbox {
+            constructor(a, b, c) {
+                this.args = {
+                    button: a,
+                    chatbox: b
+                }
+                this.icons = c;
+                this.state = false; 
+            }
+
+            display() {
+                const {button, chatbox} = this.args;
+                
+                button.addEventListener('click', () => this.toggleState(chatbox))
+            }
+
+            toggleState(chatbox) {
+                this.state = !this.state;
+                this.showOrHideChatBox(chatbox, this.args.button);
+            }
+
+            showOrHideChatBox(chatbox, button) {
+                if(this.state) {
+                    chatbox.classList.add('chatbox--active')
+                    this.toggleIcon(true, button);
+                } else if (!this.state) {
+                    chatbox.classList.remove('chatbox--active')
+                    this.toggleIcon(false, button);
+                }
+            }
+
+            toggleIcon(state, button) {
+                const { isClicked, isNotClicked } = this.icons;
+                let b = button.children[0].innerHTML;
+
+                if(state) {
+                    button.children[0].innerHTML = isClicked; 
+                } else if(!state) {
+                    button.children[0].innerHTML = isNotClicked;
+                }
+            }
+        }
+        sendMessageButton.addEventListener('click', function () {
+
+            const messageText = messageInput.value.trim(); // Получаем текст сообщения
+
+            if (messageText !== '') {
+                // Отправляем сообщение на сервер
+                const xhr = new XMLHttpRequest();
+                xhr.open('POST', 'save_message.php', true);
+                xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+                xhr.onreadystatechange = function () {
+                    if (xhr.readyState === 4 && xhr.status === 200) {
+                        // Сервер успешно обработал запрос, можно обновить чат или выполнить другие действия
+                        console.log(xhr.responseText);
+                    }
+                };
+                xhr.send(`message=${messageText}`);
+                
+                // Создаем новое сообщение
+                const messageItem = document.createElement('div');
+
+                // Вставляем новое сообщение перед первым дочерним элементом
+                // чтобы оно отображалось внизу
+                chatboxMessages.insertBefore(messageItem, chatboxMessages.lastChild);
+
+                // Очищаем поле ввода
+                messageInput.value = '';
+
+                // Прокручиваем чат вниз, чтобы видеть новые сообщения
+                chatboxMessages.scrollTop = chatboxMessages.scrollHeight;
+            }
+
+            if (messageText !== '') {
+                // Создаем новое сообщение
+                const messageItem = document.createElement('div');
+                messageItem.classList.add('messages__item', 'messages__item--operator'); // Изменяем класс на messages__item--operator
+                messageItem.textContent = messageText;
+
+                // Вставляем новое сообщение перед первым дочерним элементом
+                // чтобы оно отображалось внизу
+                chatboxMessages.insertBefore(messageItem, chatboxMessages.lastChild);
+
+                // Очищаем поле ввода
+                messageInput.value = '';
+
+                // Прокручиваем чат вниз, чтобы видеть новые сообщения
+                chatboxMessages.scrollTop = chatboxMessages.scrollHeight;
+            }
+        });
+        sendMessageButton.addEventListener('click', function () {
+
+            const messageText = messageInput.value.trim(); // Получаем текст сообщения
+
+            if (messageText !== '') {
+                // Отправляем сообщение на сервер
+                const xhr = new XMLHttpRequest();
+                xhr.open('POST', 'save_message.php', true);
+                xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+                xhr.onreadystatechange = function () {
+                    if (xhr.readyState === 4 && xhr.status === 200) {
+                        // Сервер успешно обработал запрос, можно обновить чат или выполнить другие действия
+                        console.log(xhr.responseText);
+                    }
+                };
+                xhr.send(`message=${messageText}`);
+                
+                // Создаем новое сообщение
+                const messageItem = document.createElement('div');
+
+                // Вставляем новое сообщение перед первым дочерним элементом
+                // чтобы оно отображалось внизу
+                chatboxMessages.insertBefore(messageItem, chatboxMessages.lastChild);
+
+                // Очищаем поле ввода
+                messageInput.value = '';
+
+                // Прокручиваем чат вниз, чтобы видеть новые сообщения
+                chatboxMessages.scrollTop = chatboxMessages.scrollHeight;
+            }
+
+            if (messageText !== '') {
+                // Создаем новое сообщение
+                const messageItem = document.createElement('div');
+                messageItem.classList.add('messages__item', 'messages__item--operator'); // Изменяем класс на messages__item--operator
+                messageItem.textContent = messageText;
+
+                // Вставляем новое сообщение перед первым дочерним элементом
+                // чтобы оно отображалось внизу
+                chatboxMessages.insertBefore(messageItem, chatboxMessages.lastChild);
+
+                // Очищаем поле ввода
+                messageInput.value = '';
+
+                // Прокручиваем чат вниз, чтобы видеть новые сообщения
+                chatboxMessages.scrollTop = chatboxMessages.scrollHeight;
+            }
+        });
+
+        // Обработчик события для кнопки "Send"
+        sendMessageButton.addEventListener('click', function () {
+
+            const messageText = messageInput.value.trim(); // Получаем текст сообщения
+
+            if (messageText !== '') {
+                // Отправляем сообщение на сервер
+                const xhr = new XMLHttpRequest();
+                xhr.open('POST', 'save_message.php', true);
+                xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+                xhr.onreadystatechange = function () {
+                    if (xhr.readyState === 4 && xhr.status === 200) {
+                        // Сервер успешно обработал запрос, можно обновить чат или выполнить другие действия
+                        console.log(xhr.responseText);
+                    }
+                };
+                xhr.send(`message=${messageText}`);
+                
+                // Создаем новое сообщение
+                const messageItem = document.createElement('div');
+
+                // Вставляем новое сообщение перед первым дочерним элементом
+                // чтобы оно отображалось внизу
+                chatboxMessages.insertBefore(messageItem, chatboxMessages.lastChild);
+
+                // Очищаем поле ввода
+                messageInput.value = '';
+
+                // Прокручиваем чат вниз, чтобы видеть новые сообщения
+                chatboxMessages.scrollTop = chatboxMessages.scrollHeight;
+            }
+
+            if (messageText !== '') {
+                // Создаем новое сообщение
+                const messageItem = document.createElement('div');
+                messageItem.classList.add('messages__item', 'messages__item--operator'); // Изменяем класс на messages__item--operator
+                messageItem.textContent = messageText;
+
+                // Вставляем новое сообщение перед первым дочерним элементом
+                // чтобы оно отображалось внизу
+                chatboxMessages.insertBefore(messageItem, chatboxMessages.lastChild);
+
+                // Очищаем поле ввода
+                messageInput.value = '';
+
+                // Прокручиваем чат вниз, чтобы видеть новые сообщения
+                chatboxMessages.scrollTop = chatboxMessages.scrollHeight;
+            }
+        });
+
+
+        // Найдите элемент крестика и добавьте обработчик события для его скрытия
+        const closeChatButton = document.querySelector('#closeChat');
+        closeChatButton.addEventListener('click', function () {
+            // Скройте чат при нажатии на крестик
+            chatbox.toggleState(chatbox.args.chatbox);
+
+            // Обновите иконку кнопки чата (если необходимо)
+            chatbox.toggleIcon(false, chatButton);
+        });
+
+
+
+        // Обработчик события для клавиши Enter в поле ввода сообщения
+        messageInput.addEventListener('keydown', function (event) {
+            if (event.key === 'Enter') {
+                sendMessageButton.click(); // Симулируем нажатие кнопки "Send" при нажатии Enter
+            }
+        });
+
+
+            const chatButton = document.querySelector('.chatbox__button');
+            const chatContent = document.querySelector('.chatbox__support');
+            const icons = {
+                isClicked: '<img src="images/chatimg1.png" />',
+                isNotClicked: '<img src="images/chatimg1.png" />'
+            }
+            const chatbox = new InteractiveChatbox(chatButton, chatContent, icons);
+            chatbox.display();
+            chatbox.toggleIcon(false, chatButton);
+
+    </script>
+</body>
+</html>
